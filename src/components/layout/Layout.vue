@@ -1,0 +1,22 @@
+<script setup lang="ts">
+import Footer from '../footer/Footer.vue';
+import Header from '../header/Header.vue';
+
+</script>
+
+<template>
+
+    <Header />
+    <main>
+        <slot />
+    </main>
+    <Footer />
+
+</template>
+
+<style scoped>
+main {
+    width: 100%;
+    height: 100%;
+}
+</style>

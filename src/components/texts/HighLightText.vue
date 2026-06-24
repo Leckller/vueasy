@@ -12,6 +12,6 @@ p {
 }
 
 p:hover {
-    color: rgb(0, 255, 0);
+    color: rgb(123, 123, 123);
 }
 </style>

@@ -12,12 +12,11 @@ import HighLightText from '../texts/HighLightText.vue';
         </RouterLink>
 
         <nav>
-            <HighLightText>
-                <RouterLink to="/components">Components</RouterLink>
-            </HighLightText>
-            <HighLightText>
-                <RouterLink to="/help">help</RouterLink>
-            </HighLightText>
+            <RouterLink to="/components">
+                <HighLightText>
+                    Components
+                </HighLightText>
+            </RouterLink>
         </nav>
 
     </header>
@@ -29,7 +28,19 @@ header {
     display: flex;
     width: 100%;
     border-bottom: solid 1px gainsboro;
-    max-height: 100px;
+    max-height: 70px;
+    justify-content: space-between;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+a {
+    text-decoration: none;
 }
 
 header img {

@@ -1,15 +1,17 @@
 <template>
-    <p class="text">
+    <p>
         <slot />
     </p>
 </template>
 
 <style scoped>
-.text {
-    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+p {
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-weight: 500;
+    color: black;
 }
 
-.text:hover {
-    color: green;
+p:hover {
+    color: rgb(0, 255, 0);
 }
 </style>

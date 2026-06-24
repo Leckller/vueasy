@@ -10,7 +10,7 @@ import Header from '../header/Header.vue';
     <main>
         <slot />
     </main>
-    <Footer />
+    <Footer v-show="!$route.path.includes('components')" />
 
 </template>
 
@@ -18,5 +18,6 @@ import Header from '../header/Header.vue';
 main {
     width: 100%;
     height: 100%;
+    min-height: calc(100% - 70px);
 }
 </style>

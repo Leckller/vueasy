@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Link from '../links/Link.vue';
 import HighLightText from '../texts/HighLightText.vue';
 
 </script>
@@ -12,11 +13,11 @@ import HighLightText from '../texts/HighLightText.vue';
         </RouterLink>
 
         <nav>
-            <RouterLink to="/components">
+            <Link path="/components">
                 <HighLightText>
                     Components
                 </HighLightText>
-            </RouterLink>
+            </Link>
         </nav>
 
     </header>

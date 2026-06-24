@@ -24,6 +24,7 @@ import Layout from './components/layout/Layout.vue';
   font-family: "Chelsea Market", system-ui;
   font-weight: 400;
   font-style: normal;
+  color: rgb(49, 66, 82);
 }
 
 html,

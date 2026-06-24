@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Button from '@/components/button/Button.vue';
-import Footer from '@/components/footer/Footer.vue';
 import router from '@/router';
 
 function goTo() {
@@ -13,8 +12,9 @@ function goTo() {
 
     <div id="content">
         <section>
+            <img src="../../public/favicon.ico" alt="logo">
             <h1>VuEasy</h1>
-            <Button @click="goTo">Get Started!</Button>
+            <Button variant="big" @click="goTo">Get Started!</Button>
         </section>
     </div>
 
@@ -34,11 +34,17 @@ function goTo() {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 50%;
+    height: 100%;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 100px;
     text-shadow: 7px 6px 1px #CCCCCC;
+}
+
+img {
+    height: 300px;
+    transform: translateY(80px);
+    object-fit: contain;
 }
 </style>

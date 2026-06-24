@@ -8,7 +8,6 @@
 p {
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
     font-weight: 500;
-    color: black;
 }
 
 p:hover {

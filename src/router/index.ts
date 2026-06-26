@@ -1,4 +1,4 @@
-import Components from '@/views/Components.vue'
+import Components from '@/views/components-view/index.vue'
 import Home from '@/views/Home.vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 

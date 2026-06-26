@@ -22,7 +22,10 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 200px;
     gap: 4px;
     padding: 4px;
+    border-right: solid 1px gainsboro;
 }
 </style>

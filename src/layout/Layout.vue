@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import Link from '../links/Link.vue';
-import HighLightText from '../texts/HighLightText.vue';
+import Link from '@/components/navigation/link/Link.vue';
+import HighLightText from '@/components/typography/texts/HighLightText.vue';
 
 </script>
 
 <template>
-
     <header>
 
         <RouterLink to="/">
@@ -21,6 +20,14 @@ import HighLightText from '../texts/HighLightText.vue';
         </nav>
 
     </header>
+    <main>
+        <slot />
+    </main>
+    <footer v-show="!$route.path.includes('components')">
+
+        footer!
+
+    </footer>
 
 </template>
 
@@ -46,5 +53,15 @@ a {
 
 header img {
     height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100% - 70px);
+}
+
+footer {
+    height: 300px;
 }
 </style>

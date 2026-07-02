@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Link from '@/components/links/Link.vue';
-import Sidebar from '@/components/sidebar/Sidebar.vue';
-import SidebarColapseGroup from '@/components/sidebar/SidebarColapseGroup.vue';
-import SideBarGroup from '@/components/sidebar/SideBarGroup.vue';
+import Link from '@/components/navigation/link/Link.vue';
+import Sidebar from '@/components/navigation/sidebar/Sidebar.vue';
+import SidebarColapseGroup from '@/components/navigation/sidebar/SidebarColapseGroup.vue';
+import SideBarGroup from '@/components/navigation/sidebar/SideBarGroup.vue';
 
 </script>
 

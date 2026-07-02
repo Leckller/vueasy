@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Transition } from 'vue';
 import { RouterView } from 'vue-router';
-import Layout from './components/layout/Layout.vue';
+import Layout from './layout/Layout.vue';
 </script>
 
 <template>

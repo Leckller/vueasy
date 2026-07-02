@@ -11,7 +11,7 @@ const props = defineProps({
     <div class="sidebar-colapse-group">
 
         <p class="sidebar-colapse-group-title">
-            {{ title }}
+            {{ title }} ↓
         </p>
 
         <div>

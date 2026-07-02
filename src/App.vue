@@ -54,4 +54,10 @@ body,
   transform: translateX(20px);
   opacity: 0;
 }
+
+main {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100% - 70px);
+}
 </style>

@@ -3,20 +3,22 @@ import Button from '@/components/actions/button/Button.vue';
 import router from '@/router';
 
 function goTo() {
-    router.push("/components")
+    router.push("/components/actions/button");
 }
 
 </script>
 
 <template>
 
-    <div id="content">
-        <section>
-            <img src="../../public/favicon.ico" alt="logo">
-            <h1>VuEasy</h1>
-            <Button variant="big" @click="goTo">Get Started!</Button>
-        </section>
-    </div>
+    <main>
+        <div id="content">
+            <section>
+                <img src="/favicon.ico" alt="logo">
+                <h1>VuEasy</h1>
+                <Button variant="big" @click="goTo">Get Started!</Button>
+            </section>
+        </div>
+    </main>
 
 </template>
 

@@ -3,28 +3,33 @@ import Link from '@/components/navigation/link/Link.vue';
 import Sidebar from '@/components/navigation/sidebar/Sidebar.vue';
 import SidebarColapseGroup from '@/components/navigation/sidebar/SidebarColapseGroup.vue';
 import SideBarGroup from '@/components/navigation/sidebar/SideBarGroup.vue';
+import ActiveComponent from './ActiveComponent.vue';
 
 </script>
 
 <template>
 
-    <Sidebar>
+    <main>
+        <Sidebar>
 
-        <template #body>
+            <template #body>
 
-            <SideBarGroup group-name="Componentes">
+                <SideBarGroup group-name="Componentes">
 
-                <Link>Botão</Link>
-                <Link>Checkbox</Link>
+                    <Link>Botão</Link>
+                    <Link>Checkbox</Link>
 
-            </SideBarGroup>
+                </SideBarGroup>
 
-            <SidebarColapseGroup>
-                oi
-            </SidebarColapseGroup>
+                <SidebarColapseGroup>
+                    oi
+                </SidebarColapseGroup>
 
-        </template>
+            </template>
 
-    </Sidebar>
+        </Sidebar>
+
+        <ActiveComponent />
+    </main>
 
 </template>

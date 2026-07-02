@@ -12,7 +12,7 @@ import HighLightText from '@/components/typography/texts/HighLightText.vue';
         </RouterLink>
 
         <nav>
-            <Link path="/components">
+            <Link path="/components/actions/button">
                 <HighLightText>
                     Components
                 </HighLightText>
@@ -20,9 +20,7 @@ import HighLightText from '@/components/typography/texts/HighLightText.vue';
         </nav>
 
     </header>
-    <main>
-        <slot />
-    </main>
+    <slot />
     <footer v-show="!$route.path.includes('components')">
 
         footer!
@@ -53,12 +51,6 @@ a {
 
 header img {
     height: 100%;
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    min-height: calc(100% - 70px);
 }
 
 footer {

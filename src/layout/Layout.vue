@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Link from '@/components/navigation/link/Link.vue';
+import Sidebar from '@/components/navigation/sidebar/Sidebar.vue';
+import SideBarGroup from '@/components/navigation/sidebar/SideBarGroup.vue';
 import HighLightText from '@/components/typography/texts/HighLightText.vue';
 
 </script>
@@ -20,16 +22,38 @@ import HighLightText from '@/components/typography/texts/HighLightText.vue';
         </nav>
 
     </header>
-    <slot />
-    <footer v-show="!$route.path.includes('components')">
+    <div id="main-content">
+        <Sidebar v-show="$route.path.includes('components')">
 
-        footer!
+            <template #body>
 
-    </footer>
+                <SideBarGroup group-name="Ações">
+
+                    <Link path="button">Botão</Link>
+
+                </SideBarGroup>
+
+                <SideBarGroup group-name="formulário">
+                    <Link path="input">Input</Link>
+                    <Link path="select">Select</Link>
+                </SideBarGroup>
+
+            </template>
+
+        </Sidebar>
+        <slot />
+    </div>
 
 </template>
 
 <style scoped>
+#main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
 header {
     display: flex;
     width: 100%;
@@ -51,9 +75,5 @@ a {
 
 header img {
     height: 100%;
-}
-
-footer {
-    height: 300px;
 }
 </style>

@@ -27,5 +27,16 @@
     gap: 4px;
     padding: 4px;
     border-right: solid 1px gainsboro;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 </style>

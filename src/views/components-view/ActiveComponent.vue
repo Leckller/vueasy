@@ -8,6 +8,8 @@
 
 <script setup lang="ts">
 import ButtonDemo from '@/components/actions/button/ButtonDemo.vue'
+import InputDemo from '@/components/forms/input/InputDemo.vue'
+import SelectDemo from '@/components/forms/select/SelectDemo.vue'
 import { type Component, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -18,6 +20,11 @@ const components: Record<string, Record<string, Component>> = {
     actions: {
         button: ButtonDemo,
     },
+
+    forms: {
+        input: InputDemo,
+        select: SelectDemo,
+    }
 
     //   navigation: {
     //     sidebar: SidebarView,

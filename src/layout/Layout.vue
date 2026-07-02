@@ -29,13 +29,13 @@ import HighLightText from '@/components/typography/texts/HighLightText.vue';
 
                 <SideBarGroup group-name="Ações">
 
-                    <Link path="button">Botão</Link>
+                    <Link path="/components/actions/button">Botão</Link>
 
                 </SideBarGroup>
 
                 <SideBarGroup group-name="formulário">
-                    <Link path="input">Input</Link>
-                    <Link path="select">Select</Link>
+                    <Link path="/components/forms/input">Input</Link>
+                    <Link path="/components/forms/select">Select</Link>
                 </SideBarGroup>
 
             </template>

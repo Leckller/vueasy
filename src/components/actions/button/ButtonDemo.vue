@@ -1,5 +1,5 @@
 <template>
 
-    Isso é uma demo, bbs!
+    <h1>Button!</h1>
 
 </template>

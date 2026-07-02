@@ -1,5 +1,6 @@
-import Components from '@/views/Components.vue'
+import Components from '@/views/components-view/index.vue'
 import Home from '@/views/Home.vue'
+import NotFoundView from '@/views/not-found/NotFoundView.vue'
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 export const routes: RouteRecordRaw[] = [
@@ -9,9 +10,14 @@ export const routes: RouteRecordRaw[] = [
     component: Home,
   },
   {
-    path: "/components",
-    name: "Components",
+    path: '/components/:category/:component',
+    name: 'Component',
     component: Components,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFoundView,
   },
 ]
 

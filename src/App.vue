@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Transition } from 'vue';
 import { RouterView } from 'vue-router';
-import Layout from './components/layout/Layout.vue';
+import Layout from './layout/Layout.vue';
 </script>
 
 <template>
@@ -24,6 +24,7 @@ import Layout from './components/layout/Layout.vue';
   font-family: "Chelsea Market", system-ui;
   font-weight: 400;
   font-style: normal;
+  color: rgb(49, 66, 82);
 }
 
 html,
@@ -52,5 +53,11 @@ body,
 .slide-fade-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100% - 70px);
 }
 </style>

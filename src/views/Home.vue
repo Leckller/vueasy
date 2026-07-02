@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import Button from '@/components/button/Button.vue';
-import Footer from '@/components/footer/Footer.vue';
+import Button from '@/components/actions/button/Button.vue';
 import router from '@/router';
 
 function goTo() {
-    router.push("/components")
+    router.push("/components/actions/button");
 }
 
 </script>
 
 <template>
 
-    <div id="content">
-        <section>
-            <h1>VuEasy</h1>
-            <Button @click="goTo">Get Started!</Button>
-        </section>
-    </div>
+    <main>
+        <div id="content">
+            <section>
+                <img src="/favicon.ico" alt="logo">
+                <h1>VuEasy</h1>
+                <Button variant="big" @click="goTo">Get Started!</Button>
+            </section>
+        </div>
+    </main>
 
 </template>
 
@@ -34,11 +36,17 @@ function goTo() {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 50%;
+    height: 100%;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 100px;
     text-shadow: 7px 6px 1px #CCCCCC;
+}
+
+img {
+    height: 300px;
+    transform: translateY(80px);
+    object-fit: contain;
 }
 </style>

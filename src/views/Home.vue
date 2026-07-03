@@ -15,7 +15,7 @@ function goTo() {
             <section>
                 <img src="/favicon.ico" alt="logo">
                 <h1>VuEasy</h1>
-                <Button variant="big" @click="goTo">Get Started!</Button>
+                <Button variant="outline" @click="goTo">Get Started!</Button>
             </section>
         </div>
     </main>
@@ -41,7 +41,8 @@ function goTo() {
 
 h1 {
     font-size: 100px;
-    text-shadow: 7px 6px 1px #CCCCCC;
+    text-shadow: 7px 6px 1px var(--gray-8);
+    transition-duration: 1s;
 }
 
 img {

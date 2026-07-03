@@ -1,5 +1,5 @@
 <template>
-    <main class="not-found">
+    <div class="not-found">
         <div class="content">
             <span class="code">404</span>
 
@@ -13,7 +13,7 @@
                 ← Voltar
             </button>
         </div>
-    </main>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -28,7 +28,7 @@ const goBack = () => {
 
 <style scoped>
 .not-found {
-    min-height: 100vh;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@ const goBack = () => {
     font-size: 7rem;
     font-weight: 800;
     line-height: 1;
-    background: linear-gradient(135deg, #42b883, #35495e);
+    background: linear-gradient(135deg, var(--green-12), var(--green-3));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

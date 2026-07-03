@@ -1,23 +1,28 @@
 <template>
-    <button :class="[variant, `r-${rounded}`]" @click="emit('click')">
+    <button :class="[size, variant, `r-${rounded}`]" @click="emit('click')">
         <slot />
     </button>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, type PropType } from 'vue';
+import { type PropType } from 'vue';
 
-export type ButtonVariant = "normal" | "big"
+export type ButtonSize = "normal" | "big"
+export type ButtonVariant = "outline" | "filled" | "text"
 
 const emit = defineEmits(['click'])
 const props = defineProps({
     variant: {
         type: String as PropType<ButtonVariant>,
-        default: "normal" as ButtonVariant
+        default: "text" as ButtonVariant
+    },
+    size: {
+        type: String as PropType<ButtonSize>,
+        default: "normal" as ButtonSize
     },
     rounded: {
-        type: String as PropType<ButtonVariant>,
-        default: "normal" as ButtonVariant
+        type: String as PropType<ButtonSize>,
+        default: "normal" as ButtonSize
     }
 })
 
@@ -29,7 +34,6 @@ button {
     outline: none;
     border: none;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -51,5 +55,22 @@ button:hover {
 
 .r-big {
     border-radius: 8px;
+}
+
+/* variantes */
+
+.outline {
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.filled {
+    background-color: #000;
+    color: #fff;
+}
+
+.text {
+    background-color: transparent;
+    text-decoration: underline;
 }
 </style>

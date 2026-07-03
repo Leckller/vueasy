@@ -25,8 +25,8 @@
     height: 100%;
     width: 200px;
     gap: 4px;
-    padding: 4px;
-    border-right: solid 1px gainsboro;
+    padding: 16px 12px 64px 12px;
+    border-right: solid 1px var(--gray-6);
     animation: fadeIn 0.3s ease-in-out;
 }
 

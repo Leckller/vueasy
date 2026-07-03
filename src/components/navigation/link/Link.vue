@@ -15,11 +15,9 @@ const props = defineProps({
 <style scoped>
 a {
     text-decoration: none;
-    color: black
 }
 
 a:hover {
     text-decoration: underline;
-    text-decoration-color: rgb(123, 123, 123);
 }
 </style>

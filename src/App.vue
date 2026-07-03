@@ -41,12 +41,10 @@ body {
   background:
     linear-gradient(to bottom,
       var(--green-3) 0,
-      var(--green-2) 10rem,
-      var(--green-1) 20rem,
-      var(--color-background) 40rem);
+      var(--green-2) 5rem,
+      var(--green-1) 10rem,
+      var(--color-background) 20rem);
 }
-
-
 
 #app {
   display: flex;

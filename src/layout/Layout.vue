@@ -33,12 +33,19 @@ function toggleTheme() {
                         Components
                     </HighLightText>
                 </Link>
+                <Link path="/icons">
+                    <HighLightText>
+                        Ícones
+                    </HighLightText>
+                </Link>
             </nav>
 
-            <Button variant="text" @click="toggleTheme">
-                Toggle Tema
-            </Button>
+            <div class="options">
+                <Button variant="text" @click="toggleTheme">
+                    Toggle Tema
+                </Button>
 
+            </div>
         </header>
 
         <div class="content">
@@ -95,7 +102,7 @@ function toggleTheme() {
     height: 70px;
     padding: 0 24px;
 
-    border-bottom: 1px solid var(--gray-5, gainsboro);
+    border-bottom: 1px solid var(--gray-6, gainsboro);
 
     backdrop-filter: blur(12px);
 }
@@ -110,10 +117,17 @@ function toggleTheme() {
     height: 48px;
 }
 
+.options {
+    display: flex;
+    max-width: 48px;
+}
+
 .nav {
     display: flex;
     align-items: center;
     gap: 16px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .content {
@@ -135,6 +149,8 @@ function toggleTheme() {
 .main {
     flex: 1;
     min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
 }
 
 a {

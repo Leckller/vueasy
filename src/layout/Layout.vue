@@ -30,7 +30,7 @@ function toggleTheme() {
             <nav class="nav">
                 <Link path="/components/actions/button">
                     <HighLightText>
-                        Components
+                        Componentes
                     </HighLightText>
                 </Link>
                 <Link path="/icons">

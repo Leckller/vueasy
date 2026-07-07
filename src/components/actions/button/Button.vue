@@ -1,5 +1,5 @@
 <template>
-    <button :class="[size, variant, `r-${rounded}`]" @click="emit('click')">
+    <button :class="[size, variant, radius, color]" @click="emit('click')">
         <slot />
     </button>
 </template>
@@ -7,22 +7,32 @@
 <script lang="ts" setup>
 import { type PropType } from 'vue';
 
-export type ButtonSize = "normal" | "big"
-export type ButtonVariant = "outline" | "filled" | "text"
+type ButtonSize = 1 | 2 | 3 | 4
+type ButtonRadius = "none" | "small" | "medium" | "large" | "full"
+type ButtonVariant = "classic" | "solid" | "soft" | "surface" | "outline" | "ghost"
+type ButtonColor = "green"
 
 const emit = defineEmits(['click'])
 const props = defineProps({
+    size: {
+        type: Number as PropType<ButtonSize>,
+        default: 2 as ButtonSize
+    },
     variant: {
         type: String as PropType<ButtonVariant>,
-        default: "text" as ButtonVariant
+        default: "classic" as ButtonVariant
     },
-    size: {
-        type: String as PropType<ButtonSize>,
-        default: "normal" as ButtonSize
+    radius: {
+        type: String as PropType<ButtonRadius>,
+        default: "none" as ButtonRadius
     },
-    rounded: {
-        type: String as PropType<ButtonSize>,
-        default: "normal" as ButtonSize
+    color: {
+        type: String as PropType<ButtonColor>,
+        default: "green" as ButtonColor
+    },
+    loading: {
+        type: Boolean,
+        default: false
     }
 })
 

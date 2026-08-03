@@ -70,12 +70,4 @@ main {
   height: 100%;
   min-height: calc(100% - 70px);
 }
-
-.demo-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 80px 64px;
-  max-width: 858px;
-}
 </style>

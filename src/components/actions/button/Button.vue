@@ -7,10 +7,10 @@
 <script lang="ts" setup>
 import { type PropType } from 'vue';
 
-type ButtonSize = 1 | 2 | 3 | 4
-type ButtonRadius = "none" | "small" | "medium" | "large" | "full"
-type ButtonVariant = "classic" | "solid" | "soft" | "surface" | "outline" | "ghost"
-type ButtonColor = "green"
+export type ButtonSize = 1 | 2 | 3 | 4
+export type ButtonRadius = "none" | "small" | "medium" | "large" | "full"
+export type ButtonVariant = "classic" | "solid" | "soft" | "surface" | "outline" | "ghost"
+export type ButtonColor = "green"
 
 const emit = defineEmits(['click'])
 const props = defineProps({

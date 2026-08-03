@@ -41,7 +41,7 @@ function toggleTheme() {
             </nav>
 
             <div class="options">
-                <Button variant="text" @click="toggleTheme">
+                <Button variant="ghost" @click="toggleTheme">
                     Toggle Tema
                 </Button>
 

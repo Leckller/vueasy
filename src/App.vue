@@ -25,8 +25,22 @@ import Layout from './layout/Layout.vue';
   font-family: "Chelsea Market", system-ui;
   font-weight: 400;
   font-style: normal;
-  color: var(--gray-11);
+  color: var(--gray-12);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* input,
+* button,
+* select,
+* textarea {
+  background-color: var(--gray-2);
+}
+
+* select {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--gray-6);
+  cursor: pointer;
 }
 
 html,
@@ -42,8 +56,7 @@ body {
     linear-gradient(to bottom,
       var(--green-3) 0,
       var(--green-2) 5rem,
-      var(--green-1) 10rem,
-      var(--color-background) 20rem);
+      var(--green-1) 10rem);
 }
 
 #app {

@@ -10,6 +10,7 @@
 import ButtonDemo from '@/components/actions/button/ButtonDemo.vue'
 import InputDemo from '@/components/forms/input/InputDemo.vue'
 import SelectDemo from '@/components/forms/select/SelectDemo.vue'
+import Installation from '@/components/getting-started/Installation.vue'
 import Introduction from '@/components/getting-started/Introduction.vue'
 import { type Component, computed } from 'vue'
 import { useRoute } from 'vue-router'
@@ -19,7 +20,8 @@ const route = useRoute()
 
 const components: Record<string, Record<string, Component>> = {
     'getting-started': {
-        'installation': Introduction
+        'introduction': Introduction,
+        'installation': Installation,
     },
 
     actions: {

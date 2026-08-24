@@ -28,7 +28,7 @@ function toggleTheme() {
             </RouterLink>
 
             <nav class="nav">
-                <Link path="/components/introduction/">
+                <Link path="/components/getting-started/introduction">
                     <HighLightText>
                         Componentes
                     </HighLightText>
@@ -54,6 +54,16 @@ function toggleTheme() {
                 <Sidebar>
 
                     <template #body>
+
+                        <SideBarGroup group-name="Começando">
+                            <Link path="/components/getting-started/introduction">
+                                Introdução
+                            </Link>
+                            <Link path="/components/getting-started/installation">
+                                Instalação
+                            </Link>
+                        </SideBarGroup>
+
 
                         <SideBarGroup group-name="Ações">
                             <Link path="/components/actions/button">

@@ -1,4 +1,3 @@
-vue
 <template>
     <button :class="[`size-${size}`, variant, `radius-${radius}`]" :style="colorVars" :disabled="loading"
         @click="emit('click')">

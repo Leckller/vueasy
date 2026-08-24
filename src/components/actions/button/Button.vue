@@ -77,7 +77,7 @@ button:disabled {
     font-size: 16px;
 }
 
-/* variantes — sempre usando --accent-*, nunca uma cor fixa */
+/* variantes */
 
 .classic {
     background-color: var(--accent-9);
@@ -98,7 +98,6 @@ button:disabled {
     border: 1px solid transparent;
 }
 
-/* surface agora usa a mesma alpha do soft, só que com borda */
 .surface {
     background-color: var(--accent-a2);
     color: var(--accent-11);

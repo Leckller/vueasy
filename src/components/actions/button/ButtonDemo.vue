@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import DemoContent from '@/components/utils/DemoContent.vue';
 import Button, { type ButtonColor, type ButtonRadius, type ButtonVariant } from './Button.vue';
+import buttonSource from '@/components/actions/button/Button.vue?raw';
 import { ref } from 'vue';
+import CodePreview from '@/components/utils/CodePreview.vue';
 
 const variant = ref('classic' as ButtonVariant);
 const radius = ref('small' as ButtonRadius);
@@ -58,6 +60,10 @@ const color = ref('green' as ButtonColor);
                 </Button>
             </div>
 
+        </template>
+
+        <template #code>
+            <CodePreview :code="buttonSource" lang="vue" />
         </template>
 
     </DemoContent>

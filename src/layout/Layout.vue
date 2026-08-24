@@ -28,7 +28,7 @@ function toggleTheme() {
             </RouterLink>
 
             <nav class="nav">
-                <Link path="/components/actions/button">
+                <Link path="/components/introduction/">
                     <HighLightText>
                         Componentes
                     </HighLightText>

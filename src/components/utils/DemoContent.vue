@@ -22,6 +22,7 @@ bjs do ruy
     display: flex;
     flex-direction: column;
     padding: 80px 64px;
+    gap: var(--space-2);
     max-width: 858px;
 }
 

@@ -10,6 +10,7 @@
 import ButtonDemo from '@/components/actions/button/ButtonDemo.vue'
 import InputDemo from '@/components/forms/input/InputDemo.vue'
 import SelectDemo from '@/components/forms/select/SelectDemo.vue'
+import Introduction from '@/components/getting-started/Introduction.vue'
 import { type Component, computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -17,6 +18,10 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const components: Record<string, Record<string, Component>> = {
+    'getting-started': {
+        'installation': Introduction
+    },
+
     actions: {
         button: ButtonDemo,
     },
@@ -36,9 +41,9 @@ const components: Record<string, Record<string, Component>> = {
 }
 
 const activeComponent = computed(() => {
-    const category = route.params.category as string || 'actions'
-    const component = route.params.component as string || 'button'
+    const category = route.params.category as string || 'getting-started'
+    const component = route.params.component as string || ''
 
-    return components?.[category]?.[component] ?? null
+    return components?.[category]?.[component] ?? Introduction
 })
 </script>

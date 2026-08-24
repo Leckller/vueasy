@@ -28,9 +28,9 @@ function toggleTheme() {
             </RouterLink>
 
             <nav class="nav">
-                <Link path="/components/actions/button">
+                <Link path="/components/introduction/">
                     <HighLightText>
-                        Components
+                        Componentes
                     </HighLightText>
                 </Link>
                 <Link path="/icons">
@@ -41,7 +41,7 @@ function toggleTheme() {
             </nav>
 
             <div class="options">
-                <Button variant="text" @click="toggleTheme">
+                <Button variant="ghost" @click="toggleTheme">
                     Toggle Tema
                 </Button>
 

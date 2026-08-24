@@ -1,5 +1,5 @@
 <template>
-    <RouterLink :to="path">
+    <RouterLink :class="{ active: $route.path === path }" :to="path">
         <slot />
     </RouterLink>
 </template>
@@ -13,8 +13,14 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 a {
     text-decoration: none;
+
 }
 
 a:hover {

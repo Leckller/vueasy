@@ -3,7 +3,7 @@ import Button from '@/components/actions/button/Button.vue';
 import router from '@/router';
 
 function goTo() {
-    router.push("/components/actions/button");
+    router.push("/components/getting-started/introduction");
 }
 
 </script>

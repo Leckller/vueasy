@@ -1,5 +1,5 @@
 <template>
-    <RouterLink :class="{ active: $route.path === path }" :to="path">
+    <RouterLink :class="{ active: $route.path === path }" :style="{ color: color }" :to="path">
         <slot />
     </RouterLink>
 </template>
@@ -7,7 +7,8 @@
 <script lang="ts" setup>
 
 const props = defineProps({
-    path: { type: String, default: "" }
+    path: { type: String, default: "" },
+    color: { type: String, default: "" }
 })
 
 </script>

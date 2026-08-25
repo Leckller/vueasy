@@ -25,11 +25,19 @@
                 <Button radius="small">Olha q botão bacana!</Button>
             </div>
         </template>
+        <template #footer>
+            <DemoFooter back="" next="/components/getting-started/installation">
+                <template #next>
+                    Instalação
+                </template>
+            </DemoFooter>
+        </template>
     </DemoContent>
 </template>
 
 <script lang="ts" setup>
 import Button from '../actions/button/Button.vue';
 import DemoContent from '../utils/DemoContent.vue';
+import DemoFooter from '../utils/DemoFooter.vue';
 
 </script>

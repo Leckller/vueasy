@@ -44,8 +44,6 @@ import Layout from './layout/Layout.vue';
   cursor: pointer;
 }
 
-
-
 html,
 body,
 #app {

@@ -1,12 +1,16 @@
 <template>
-    <button :class="[`size-${size}`, variant, `radius-${radius}`]" :style="colorVars" :disabled="loading"
-        @click="emit('click')">
+    <button :class="[
+        `size-${size}`,
+        variant,
+        `radius-${radius}`,
+        { 'is-clicked': isClicked }
+    ]" :style="colorVars" :disabled="loading" @click="handleClick">
         <slot />
     </button>
 </template>
 
 <script lang="ts" setup>
-import { type PropType, computed } from 'vue';
+import { type PropType, computed, ref } from 'vue';
 
 export type ButtonSize = 1 | 2 | 3 | 4
 export type ButtonRadius = "none" | "small" | "medium" | "large" | "full"
@@ -37,6 +41,18 @@ const colorVars = computed(() => ({
     '--accent-a7': `var(--${props.color}-a7)`,
     '--accent-contrast': LIGHT_COLORS.includes(props.color) ? '#1c1a15' : '#fff',
 }))
+
+const isClicked = ref(false)
+
+const handleClick = () => {
+    isClicked.value = false
+
+    requestAnimationFrame(() => {
+        isClicked.value = true
+    })
+
+    emit('click')
+}
 </script>
 
 <style scoped>
@@ -47,6 +63,7 @@ button {
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
+    transition: 300ms all;
 }
 
 button:disabled {
@@ -83,6 +100,10 @@ button:disabled {
     color: var(--accent-contrast);
     border: 1px solid var(--accent-9);
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.classic:active {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .solid {
